@@ -9,7 +9,6 @@
 	"scripts": {
 		"commit": "node ./node_modules/cz-customizable/standalone.js"
 	},
-	"dependencies": {},
 	"devDependencies": {
 		"cz-customizable": "^7.0.0"
 	},

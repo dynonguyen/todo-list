@@ -1,0 +1,6 @@
+{
+	"cSpell.words": ["todos"],
+	"files.exclude": {
+		"**/.docs": false
+	}
+}

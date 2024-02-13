@@ -1,0 +1,11 @@
+{
+	"name": "todo-list-server",
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+		"start": "json-server db.json --port 3000"
+	},
+	"dependencies": {
+		"json-server": "^1.0.0-alpha.23"
+	}
+}
