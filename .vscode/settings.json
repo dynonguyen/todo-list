@@ -1,6 +1,7 @@
 {
-	"cSpell.words": ["todos"],
+	"cSpell.words": ["imgs", "preact", "todos"],
 	"files.exclude": {
-		"**/.docs": false
+		"**/.docs": false,
+		"**/bun.lockb": true
 	}
 }
