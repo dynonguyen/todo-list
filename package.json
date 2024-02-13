@@ -1,0 +1,21 @@
+{
+	"name": "todo-list",
+	"version": "0.0.1",
+	"description": "Quickly learn a UI library through a CRUD todo list app",
+	"repository": "https://github.com/TuanNguyen2504/todo-list",
+	"author": "TuanNguyen2504",
+	"private": false,
+	"license": "MIT",
+	"scripts": {
+		"commit": "node ./node_modules/cz-customizable/standalone.js"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"cz-customizable": "^7.0.0"
+	},
+	"config": {
+		"cz-customizable": {
+			"config": "./.cz-config.cjs"
+		}
+	}
+}
