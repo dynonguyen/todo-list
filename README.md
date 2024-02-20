@@ -1,6 +1,9 @@
-<h1 align="center">Front-end UI Libraries</h1>
+<h1 align="center">Todo List | Front-end UI Libraries</h1>
 
-> Quickly learn a UI library through a CRUD todo list app
+<div align="center">
+  <img width="64" src="./.docs/imgs/logo.png" />
+  <div>Quickly learn a UI library through a CRUD todo list app</div>
+</div>
 
 ## 💥 Features
 

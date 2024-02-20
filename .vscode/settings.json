@@ -1,7 +1,19 @@
 {
-	"cSpell.words": ["imgs", "preact", "todos"],
+	"cSpell.words": [
+		"daisyui",
+		"imgs",
+		"nextui",
+		"preact",
+		"tailwindcss",
+		"todos"
+	],
 	"files.exclude": {
 		"**/.docs": false,
-		"**/bun.lockb": true
-	}
+		"**/bun.lockb": true,
+		"**/yarn.lock": true
+	},
+	"tailwindCSS.emmetCompletions": true,
+	"tailwindCSS.colorDecorators": false,
+	"headwind.removeDuplicates": true,
+	"headwind.runOnSave": true
 }
