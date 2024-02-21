@@ -6,6 +6,7 @@
 		"nextui",
 		"preact",
 		"tailwindcss",
+		"tanstack",
 		"todos"
 	],
 	"files.exclude": {
