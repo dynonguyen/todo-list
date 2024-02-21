@@ -44,6 +44,19 @@ Open browser: [localhost:3000/todos](http://localhost:3000/todos)
 
 <img src="./.docs/imgs/react.svg" width="24" />
 
+```bash
+  cd react
+  yarn install
+  yarn start
+
+  # or
+
+  yarn install
+  yarn start:react
+```
+
+Open browser: [localhost:8000](http://localhost:8000)
+
 ### React Native
 
 <img src="./.docs/imgs/react.svg" width="24" />
