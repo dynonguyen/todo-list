@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
+import ComingSoon from '~/components/ComingSoon';
 import MainLayout from '~/components/layouts/MainLayout';
 import { PATH } from '~/constants/path';
 
@@ -12,9 +13,9 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: PATH.TODO, element: <TodoList /> },
-      { path: PATH.CATEGORY, element: <div>Category</div> },
-      { path: PATH.CALENDAR, element: <div>Calendar</div> },
-      { path: PATH.FOCUS, element: <div>Focus</div> },
+      { path: PATH.CATEGORY, element: <ComingSoon /> },
+      { path: PATH.CALENDAR, element: <ComingSoon /> },
+      { path: PATH.FOCUS, element: <ComingSoon /> },
       { path: '*', element: <Navigate to={PATH.TODO} /> }
     ]
   }

@@ -57,13 +57,9 @@ Open browser: [localhost:3000/todos](http://localhost:3000/todos)
 
 ```bash
   cd react
+  cp .env.local .env
   yarn install
   yarn start
-
-  # or
-
-  yarn install
-  yarn start:react
 ```
 
 Open browser: [localhost:8000](http://localhost:8000)
