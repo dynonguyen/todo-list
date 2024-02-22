@@ -29,19 +29,13 @@
   yarn start
 ```
 
-Open browser: [localhost:3000/todos](http://localhost:3000/todos)
+Open browser: [localhost:3000/api/todos](http://localhost:3000/api/todos)
 
 ---
 
 ### Angular
 
 <img src="./.docs/imgs/angular.svg" width="32" />
-
----
-
-### Jquery
-
-<img src="./.docs/imgs/jquery.png" width="32" />
 
 ---
 
@@ -75,10 +69,6 @@ Open browser: [localhost:8000](http://localhost:8000)
 ### Svelte
 
 <img src="./.docs/imgs/svelte.svg" width="32" />
-
-### Vanilla
-
-<img src="./.docs/imgs/javascript.svg" width="32" />
 
 ### Vue
 

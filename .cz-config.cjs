@@ -19,13 +19,11 @@ const TYPES = {
 
 const SCOPES = [
 	'angular',
-	'jquery',
 	'preact',
 	'react-native',
 	'react',
 	'solid',
 	'svelte',
-	'vanilla',
 	'vue',
 	'nextjs',
 	'server',
