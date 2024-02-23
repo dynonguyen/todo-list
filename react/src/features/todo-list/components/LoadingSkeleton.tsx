@@ -6,7 +6,7 @@ export const LoadingSkeleton = () => {
       {Array(DEFAULT.PAGE_LIMIT)
         .fill(1)
         .map((_, index) => (
-          <div key={index} className="rounded-lg bg-base-200 h-[72px]"></div>
+          <div key={index} className="rounded-lg animate-pulse bg-base-200 h-[72px]"></div>
         ))}
     </div>
   );

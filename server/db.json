@@ -1,25 +1,39 @@
 {
-  "todos": [
-    {
-      "title": "ABC-a1",
-      "id": "da6e92cf-0b71-4302-b687-47525ef24076",
-      "isCompleted": false,
-      "createdAt": "2024-02-23T15:20:34.804Z",
-      "updatedAt": "2024-02-23T15:20:34.804Z"
-    },
-    {
-      "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "id": "719c8a3b-0de3-4e82-8a4c-17365792fc38",
-      "isCompleted": false,
-      "createdAt": "2024-02-23T15:20:41.152Z",
-      "updatedAt": "2024-02-23T15:20:41.152Z"
-    },
-    {
-      "title": "aa asff afqwr ịuió 121145125 k 12j5k1j25 nmflmanfnxaf asok1515",
-      "id": "900f88a1-7598-4990-b9a8-efd208d030c2",
-      "isCompleted": false,
-      "createdAt": "2024-02-23T15:22:39.407Z",
-      "updatedAt": "2024-02-23T15:22:39.407Z"
-    }
-  ]
+	"todos": [
+		{
+			"title": "ABC-a1",
+			"id": "da6e92cf-0b71-4302-b687-47525ef24076",
+			"isCompleted": false,
+			"createdAt": "2024-02-23T15:20:34.804Z",
+			"updatedAt": "2024-02-23T15:20:34.804Z"
+		},
+		{
+			"title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"id": "719c8a3b-0de3-4e82-8a4c-17365792fc38",
+			"isCompleted": false,
+			"createdAt": "2024-02-23T15:20:41.152Z",
+			"updatedAt": "2024-02-23T15:20:41.152Z"
+		},
+		{
+			"title": "aa asff afqwr ịuió 121145125 k 12j5k1j25 nmflmanfnxaf asok1515",
+			"id": "900f88a1-7598-4990-b9a8-efd208d030c2",
+			"isCompleted": false,
+			"createdAt": "2024-02-23T15:22:39.407Z",
+			"updatedAt": "2024-02-23T15:22:39.407Z"
+		}
+	],
+	"categories": [
+		{
+			"id": "5a7c3b5b-8f6c-4b4b-8b3c-4b3c4b4b4b4b",
+			"name": "Work",
+			"icon": "3rd-place-medal",
+			"color": "#f9c74f"
+		},
+		{
+			"id": "5a7c3b5b-8f6c-4b4b-8b3c-4b3c4b4b4b42",
+			"name": "Personal",
+			"icon": "1st-place-medal",
+			"color": "#19c74f"
+		}
+	]
 }

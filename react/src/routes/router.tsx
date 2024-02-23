@@ -6,6 +6,7 @@ import { PATH } from '~/constants/path';
 
 // -----------------------------
 const TodoList = React.lazy(() => import('~/features/todo-list'));
+const CategoryList = React.lazy(() => import('~/features/category-list'));
 
 // -----------------------------
 const router = createBrowserRouter([
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: PATH.TODO, element: <TodoList /> },
-      { path: PATH.CATEGORY, element: <ComingSoon /> },
+      { path: PATH.CATEGORY, element: <CategoryList /> },
       { path: PATH.CALENDAR, element: <ComingSoon /> },
       { path: PATH.FOCUS, element: <ComingSoon /> },
       { path: '*', element: <Navigate to={PATH.TODO} /> }
