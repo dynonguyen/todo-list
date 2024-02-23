@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
-import Loading from '~/components/Loading';
 import Pagination from '~/components/Pagination';
 import ServerError from '~/components/ServerError';
 import { fetcher } from '~/configs/query-client';
@@ -9,6 +8,7 @@ import { ENDPOINT } from '~/constants/endpoint';
 import { QUERY_KEY, SEARCH_PARAM_KEY } from '~/constants/key';
 import { Paginated } from '~/types/Paginated';
 import { Todo } from '~/types/Todo';
+import LoadingSkeleton from './components/LoadingSkeleton';
 import NoTodoFound from './components/NoTodoFound';
 import TodoItem from './components/TodoItem';
 
@@ -19,14 +19,14 @@ export const TodoList = () => {
     Number(searchParams.get(SEARCH_PARAM_KEY.LIMIT) || DEFAULT.PAGE_LIMIT)
   ];
 
-  console.log(page, limit);
-
-  const { data, isFetching, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: [QUERY_KEY.TODOS, page, limit],
-    queryFn: fetcher<Paginated<Todo>>(ENDPOINT.GET_TODOS, { params: { _page: page, _limit: limit } })
+    queryFn: fetcher<Paginated<Todo>>(ENDPOINT.GET_TODOS, {
+      params: { _page: page, _limit: limit, _sort: 'createdAt', _order: 'desc' }
+    })
   });
 
-  if (isFetching) return <Loading />;
+  if (isLoading) return <LoadingSkeleton />;
 
   if (isError) return <ServerError />;
 

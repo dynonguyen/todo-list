@@ -1,32 +1,18 @@
 {
-	"todos": [
-		{
-			"id": "1b9d2c59-70e4-40b4-acf3-3da4a1f90904",
-			"title": "Read book",
-			"isCompleted": true,
-			"createdAt": "2024-01-01T00:00:00.000Z",
-			"updatedAt": "2024-01-01T00:00:00.000Z"
-		},
-		{
-			"id": "2e7b9a9d-83d9-4b1e-af53-178e2f3151a5",
-			"title": "Go for a run",
-			"isCompleted": false,
-			"createdAt": "2024-01-02T00:00:00.000Z",
-			"updatedAt": "2024-01-02T00:00:00.000Z"
-		},
-		{
-			"id": "3c706fb1-ff5a-4f8a-9c78-1daa5f4e71e9",
-			"title": "Buy groceries",
-			"isCompleted": true,
-			"createdAt": "2024-01-03T00:00:00.000Z",
-			"updatedAt": "2024-01-03T00:00:00.000Z"
-		},
-		{
-			"id": "4e3ff9d0-4a09-4c11-a6e8-91a870c5d4e7",
-			"title": "Clean the house",
-			"isCompleted": false,
-			"createdAt": "2024-01-04T00:00:00.000Z",
-			"updatedAt": "2024-01-04T00:00:00.000Z"
-		}
-	]
+  "todos": [
+    {
+      "title": "Learn everything",
+      "id": "c1fc7a9a-63e6-46ec-9289-266f0668fac2",
+      "isCompleted": true,
+      "createdAt": "2024-02-23T07:53:44.256Z",
+      "updatedAt": "2024-02-23T07:53:44.256Z"
+    },
+    {
+      "title": "TEST",
+      "id": "ba360b6d-f062-49bb-bbfd-d9b44368fbd6",
+      "isCompleted": false,
+      "createdAt": "2024-02-23T08:18:52.100Z",
+      "updatedAt": "2024-02-23T08:18:52.100Z"
+    }
+  ]
 }

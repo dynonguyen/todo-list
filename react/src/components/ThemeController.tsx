@@ -1,17 +1,7 @@
-import React from 'react';
-import { LS_KEY } from '~/constants/key';
+import { useThemeMode } from '~/stores/theme';
 
 export const ThemeController = () => {
-  React.useLayoutEffect(() => {
-    const mode = localStorage.getItem(LS_KEY.THEME) || 'dark';
-    document.documentElement.setAttribute('data-theme', mode);
-  }, []);
-
-  const toggleTheme = () => {
-    const mode = localStorage.getItem(LS_KEY.THEME) === 'dark' ? 'light' : 'dark';
-    localStorage.setItem(LS_KEY.THEME, mode);
-    document.documentElement.setAttribute('data-theme', mode);
-  };
+  const toggleTheme = useThemeMode((state) => state.toggleTheme);
 
   return (
     <label className="swap swap-rotate">

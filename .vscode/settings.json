@@ -8,7 +8,8 @@
 		"preact",
 		"tailwindcss",
 		"tanstack",
-		"todos"
+		"todos",
+		"zustand"
 	],
 	"files.exclude": {
 		"**/.docs": false,

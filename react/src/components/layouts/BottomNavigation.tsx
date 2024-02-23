@@ -42,7 +42,7 @@ export const BottomNavigation = () => {
   );
 
   return (
-    <ul className="flex items-center justify-between gap-2 py-3 bg-base-200 px-7">
+    <ul className="flex items-center justify-between gap-2 py-2 bg-base-200 px-7">
       {leftMenu.map(renderMenuItem)}
 
       <NewTodo />
