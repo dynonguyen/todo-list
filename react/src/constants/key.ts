@@ -7,6 +7,9 @@ export const QUERY_KEY = {
 };
 
 export const SEARCH_PARAM_KEY = {
-  PAGE: '_page',
-  LIMIT: '_limit'
+  PAGE: 'page',
+  LIMIT: 'limit',
+  SEARCH_BY: 'searchBy',
+  KEYWORD: 'keyword',
+  FILTER: 'filter'
 };

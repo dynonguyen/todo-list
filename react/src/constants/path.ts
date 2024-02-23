@@ -1,5 +1,5 @@
 export const PATH = {
-  TODO: '/',
+  TODO: '/todo',
   CATEGORY: '/category',
   CALENDAR: '/calendar',
   FOCUS: '/focus',

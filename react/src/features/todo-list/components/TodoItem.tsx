@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import { axiosInstance } from '~/configs/query-client';
 import { ENDPOINT } from '~/constants/endpoint';
 import { QUERY_KEY } from '~/constants/key';
-import { Paginated } from '~/types/Paginated';
 import { Todo } from '~/types/Todo';
 
 const markDoneTodo = async ({ id, isCompleted }: Pick<Todo, 'id' | 'isCompleted'>) => {
@@ -21,12 +20,7 @@ export const TodoItem = (props: Todo) => {
   const markDoneMutation = useMutation({
     mutationFn: markDoneTodo,
     onSuccess: () => {
-      queryClient.setQueriesData<Partial<Paginated<Todo>>>({ queryKey: [QUERY_KEY.TODOS] }, (prevData) => {
-        return {
-          ...prevData,
-          docs: prevData?.docs?.map((todo) => (todo.id === id ? { ...todo, isCompleted: !isCompleted } : todo))
-        };
-      });
+      queryClient.invalidateQueries({ queryKey: [QUERY_KEY.TODOS] });
     }
   });
   const deleteMutation = useMutation({
@@ -60,7 +54,7 @@ export const TodoItem = (props: Todo) => {
         className={`rounded-full checkbox checkbox-xs shrink-0 ${clsx({ 'checkbox-success': isCompleted })}`}
       />
       <div className="flex flex-col gap-1 grow">
-        <h6 className="text-base font-normal">{title}</h6>
+        <h6 className="text-base font-normal break-all whitespace-pre-wrap ">{title}</h6>
         <p className="text-sm text-gray-500">{dayjs(createdAt).format('HH:mm DD/MM/YYYY')}</p>
       </div>
 

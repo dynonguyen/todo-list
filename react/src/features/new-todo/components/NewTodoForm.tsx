@@ -63,6 +63,7 @@ export const NewTodoForm = ({ onSuccess }: { onSuccess: () => void }) => {
           placeholder="Enter title"
           className={clsx('w-full max-w-xs input input-bordered', { 'input-error': errors.title })}
           maxLength={MAX.TITLE}
+          autoFocus
           {...register('title')}
         />
         {errors.title && (
