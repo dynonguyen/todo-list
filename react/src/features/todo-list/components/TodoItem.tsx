@@ -59,7 +59,7 @@ export const TodoItem = (props: Todo) => {
       </div>
 
       {deleteMutation.isPending ? (
-        <span className="loading loading-spinner"></span>
+        <span className="loading text-error loading-spinner"></span>
       ) : (
         <span
           className="icon-[ph--trash-simple-fill] w-5 h-5 text-error shrink-0 group-hover:opacity-100 group-hover:visible opacity-0 invisible transition-all hover:text-error/80"

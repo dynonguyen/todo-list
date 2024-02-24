@@ -12,7 +12,7 @@ import { Todo } from '~/types/Todo';
 
 const MAX = { TITLE: 100 };
 
-const schema = yup.object({ title: yup.string().required().max(MAX.TITLE) });
+const schema = yup.object({ title: yup.string().trim().required().max(MAX.TITLE) });
 
 type TodoForm = Pick<Todo, 'title'>;
 

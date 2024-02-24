@@ -4,5 +4,7 @@ export const ENDPOINT = {
   DELETE_TODO: '/todos/:id',
   POST_NEW_TODO: '/todos',
 
-  GET_CATEGORIES: '/categories'
+  GET_CATEGORIES: '/categories',
+  POST_NEW_CATEGORY: '/categories',
+  DELETE_CATEGORY: '/categories/:id'
 };
