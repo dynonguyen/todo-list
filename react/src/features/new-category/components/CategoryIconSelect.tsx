@@ -24,7 +24,7 @@ export const CategoryIconSelect = (props: CategoryIconSelectProps) => {
     <React.Fragment>
       {value ? (
         <div
-          className="flex items-center justify-center rounded-md cursor-pointer w-11 h-11 bg-base-200/50 hover:bg-base-200"
+          className="flex items-center justify-center transition-colors rounded-md cursor-pointer w-11 h-11 bg-base-300/70 hover:bg-base-300"
           onClick={() => setOpen(!open)}
         >
           <img src={value} className="w-5 h-5 mx-auto" />

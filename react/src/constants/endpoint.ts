@@ -5,6 +5,7 @@ export const ENDPOINT = {
   POST_NEW_TODO: '/todos',
 
   GET_CATEGORIES: '/categories',
+  GET_CATEGORY: '/categories/:id',
   POST_NEW_CATEGORY: '/categories',
   DELETE_CATEGORY: '/categories/:id'
 };

@@ -5,6 +5,7 @@ import { axiosInstance } from '~/configs/query-client';
 import { ENDPOINT } from '~/constants/endpoint';
 import { QUERY_KEY } from '~/constants/key';
 import { Todo } from '~/types/Todo';
+import TodoCategory from './TodoCategory';
 
 const markDoneTodo = async ({ id, isCompleted }: Pick<Todo, 'id' | 'isCompleted'>) => {
   return axiosInstance.patch(ENDPOINT.PATCH_MARK_DONE.replace(':id', id), { isCompleted });
@@ -14,7 +15,7 @@ const deleteTodo = async ({ id }: Pick<Todo, 'id'>) => {
 };
 
 export const TodoItem = (props: Todo) => {
-  const { id, title, createdAt, isCompleted } = props;
+  const { id, title, createdAt, isCompleted, categoryId } = props;
 
   const queryClient = useQueryClient();
   const markDoneMutation = useMutation({
@@ -53,6 +54,7 @@ export const TodoItem = (props: Todo) => {
         readOnly
         className={`rounded-full checkbox checkbox-xs shrink-0 ${clsx({ 'checkbox-success': isCompleted })}`}
       />
+
       <div className="flex flex-col gap-1 grow">
         <h6 className="text-base font-normal break-all whitespace-pre-wrap ">{title}</h6>
         <p className="text-sm text-gray-500">{dayjs(createdAt).format('HH:mm DD/MM/YYYY')}</p>
@@ -66,6 +68,8 @@ export const TodoItem = (props: Todo) => {
           onClick={handleDeleteTodo}
         ></span>
       )}
+
+      {categoryId && <TodoCategory id={categoryId} />}
     </li>
   );
 };

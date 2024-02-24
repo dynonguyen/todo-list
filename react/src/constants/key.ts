@@ -5,7 +5,8 @@ export const LS_KEY = {
 export const QUERY_KEY = {
   TODOS: 'todos',
   CATEGORY_ICON: 'category-icon',
-  CATEGORIES: 'categories'
+  CATEGORIES: 'categories',
+  CATEGORY: 'category'
 };
 
 export const SEARCH_PARAM_KEY = {

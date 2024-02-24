@@ -1,4 +1,86 @@
 {
-  "todos": [],
-  "categories": []
+	"todos": [
+		{
+			"title": "Learn English",
+			"categoryId": "e3230841-c362-4be1-9b3f-fd4731863211",
+			"id": "581674a7-6768-4c2a-a422-f40ade20388a",
+			"isCompleted": true,
+			"createdAt": "2024-02-24T10:36:19.605Z",
+			"updatedAt": "2024-02-24T10:36:19.605Z"
+		},
+		{
+			"title": "Listen to music",
+			"categoryId": "cd221d02-ae06-4575-8a69-dffe4a39f450",
+			"id": "2828ce8d-df5c-41f2-88a3-e647b1953c7b",
+			"isCompleted": false,
+			"createdAt": "2024-02-24T10:37:50.526Z",
+			"updatedAt": "2024-02-24T10:37:50.526Z"
+		},
+		{
+			"title": "Feed the cat",
+			"categoryId": "d97abae4-b2d3-45cd-b312-cad6404b669d",
+			"id": "7bfdf278-f4f7-4af0-a33b-bbdee1c6f0d8",
+			"isCompleted": false,
+			"createdAt": "2024-02-24T10:40:12.722Z",
+			"updatedAt": "2024-02-24T10:40:12.722Z"
+		}
+	],
+	"categories": [
+		{
+			"color": "#e1a35b",
+			"name": "Work",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/briefcase.svg",
+			"id": "18548537-1e5f-444a-9638-134ac30cfb99",
+			"createdAt": "2024-02-24T10:33:57.140Z",
+			"updatedAt": "2024-02-24T10:33:57.140Z"
+		},
+		{
+			"name": "Sport",
+			"color": "#9e6310",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/american-football.svg",
+			"id": "5398c8a4-cea4-4dee-aec5-82a6322df550",
+			"createdAt": "2024-02-24T10:34:26.000Z",
+			"updatedAt": "2024-02-24T10:34:26.000Z"
+		},
+		{
+			"name": "Music",
+			"color": "#ab56d2",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/musical-note.svg",
+			"id": "cd221d02-ae06-4575-8a69-dffe4a39f450",
+			"createdAt": "2024-02-24T10:35:00.276Z",
+			"updatedAt": "2024-02-24T10:35:00.276Z"
+		},
+		{
+			"name": "Health",
+			"color": "#e56c6c",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/heart-suit.svg",
+			"id": "1e93a764-94af-4f81-870d-fe6788e4c5ce",
+			"createdAt": "2024-02-24T10:35:36.669Z",
+			"updatedAt": "2024-02-24T10:35:36.669Z"
+		},
+		{
+			"name": "Study",
+			"color": "#428cd7",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/blue-book.svg",
+			"id": "e3230841-c362-4be1-9b3f-fd4731863211",
+			"createdAt": "2024-02-24T10:36:02.670Z",
+			"updatedAt": "2024-02-24T10:36:02.670Z"
+		},
+		{
+			"color": "#22916c",
+			"name": "Home",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/derelict-house.svg",
+			"id": "d1133a18-4536-4109-8f94-5b60a4815131",
+			"createdAt": "2024-02-24T10:39:13.001Z",
+			"updatedAt": "2024-02-24T10:39:13.001Z"
+		},
+		{
+			"name": "Pet",
+			"color": "#e9872b",
+			"icon": "https://api.iconify.design/fluent-emoji-flat/cat-face.svg",
+			"id": "d97abae4-b2d3-45cd-b312-cad6404b669d",
+			"createdAt": "2024-02-24T10:39:36.390Z",
+			"updatedAt": "2024-02-24T10:39:36.390Z"
+		}
+	]
 }

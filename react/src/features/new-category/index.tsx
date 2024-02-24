@@ -25,7 +25,6 @@ export const NewCategory = () => {
 
           <NewCategoryForm onSuccess={() => setOpen(false)} />
         </div>
-        <form method="dialog" className="modal-backdrop" onClick={() => setOpen(false)}></form>
       </dialog>
     </React.Fragment>
   );
