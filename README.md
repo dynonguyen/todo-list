@@ -53,7 +53,7 @@ Open browser: [localhost:3000/api/todos](http://localhost:3000/api/todos)
 
 ```bash
   cd react
-  cp .env.local .env
+  cp .env.share .env
   yarn install
   yarn start
 ```
