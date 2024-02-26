@@ -1,11 +1,8 @@
-import Todo from './components/Todo';
+import TodoList from './(todo-list)';
 
-const TodoListPage = () => {
-	return (
-		<div>
-			<Todo />
-		</div>
-	);
+const TodoListPage = (props) => {
+  console.log(props);
+  return <TodoList />;
 };
 
 export default TodoListPage;
