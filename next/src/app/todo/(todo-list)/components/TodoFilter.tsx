@@ -11,8 +11,7 @@ export const TodoFilter = () => {
   const filtered = (searchParams.get(SEARCH_PARAM_KEY.FILTER) as FilterValue) || 'all';
 
   const handleFilterChange = (filter: FilterValue) => {
-    // searchParams.set(SEARCH_PARAM_KEY.FILTER, filter);
-    // setSearchParams(searchParams);
+    setSearchParams({ [SEARCH_PARAM_KEY.FILTER]: filter });
   };
 
   const filters: Array<{ value: FilterValue; title: string; active: boolean }> = [

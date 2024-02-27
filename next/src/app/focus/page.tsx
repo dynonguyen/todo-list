@@ -1,7 +1,7 @@
-import ComingSoon from '~/components/ComingSoon';
+import PageResult from '~/components/PageResult';
 
 export const FocusPage = () => {
-	return <ComingSoon />;
+  return <PageResult imgSrc="coming-soon.svg" title="Coming soon" />;
 };
 
 export default FocusPage;

@@ -1,6 +1,7 @@
+'use client';
+
 import clsx from 'clsx';
 import dayjs from 'dayjs';
-import { QUERY_KEY } from '~/constants/key';
 import { Todo } from '~/types/Todo';
 import TodoCategory from './TodoCategory';
 
@@ -14,32 +15,14 @@ const deleteTodo = async ({ id }: Pick<Todo, 'id'>) => {
 export const TodoItem = (props: Todo) => {
   const { id, title, createdAt, isCompleted, categoryId } = props;
 
-  return null;
-
-  const queryClient = useQueryClient();
-  const markDoneMutation = useMutation({
-    mutationFn: markDoneTodo,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [QUERY_KEY.TODOS] });
-    }
-  });
-  const deleteMutation = useMutation({
-    mutationFn: deleteTodo,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [QUERY_KEY.TODOS] });
-    }
-  });
-
-  const handleToggleComplete = () => {
-    markDoneMutation.mutate({ id, isCompleted: !isCompleted });
-  };
+  const handleToggleComplete = () => {};
 
   const handleDeleteTodo = (ev: React.MouseEvent) => {
-    ev.preventDefault();
+    /*   ev.preventDefault();
     ev.stopPropagation();
 
     if (deleteMutation.isPending) return;
-    deleteMutation.mutate({ id });
+    deleteMutation.mutate({ id }); */
   };
 
   return (
@@ -59,7 +42,7 @@ export const TodoItem = (props: Todo) => {
         <p className="text-sm text-gray-500">{dayjs(createdAt).format('HH:mm DD/MM/YYYY')}</p>
       </div>
 
-      {deleteMutation.isPending ? (
+      {false ? (
         <span className="loading text-error loading-spinner"></span>
       ) : (
         <span

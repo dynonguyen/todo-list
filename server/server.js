@@ -1,5 +1,6 @@
 import cors from 'cors';
 import jsonServer from 'json-server';
+import morgan from 'morgan';
 import queryString from 'query-string';
 
 const server = jsonServer.create();
@@ -27,9 +28,11 @@ router.render = (req, res) => {
 	res.jsonp(res.locals.data);
 };
 
-const PORT = 3000;
 server.use(cors());
+server.use(morgan('dev'));
 server.use('/api', router);
+
+const PORT = 3000;
 server.listen(PORT, () => {
 	console.log('JSON Server is running at port', PORT);
 });
