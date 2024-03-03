@@ -7,8 +7,8 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import * as yup from 'yup';
+import { addTodo } from '~/server-actions/todo';
 import { Todo } from '~/types/Todo';
-import { addTodo } from '../actions/todo';
 import CategorySelect from './CategorySelect';
 
 const MAX = { TITLE: 100 };

@@ -26,14 +26,6 @@
       "updatedAt": "2024-02-24T10:35:00.276Z"
     },
     {
-      "name": "Health",
-      "color": "#e56c6c",
-      "icon": "https://api.iconify.design/fluent-emoji-flat/heart-suit.svg",
-      "id": "1e93a764-94af-4f81-870d-fe6788e4c5ce",
-      "createdAt": "2024-02-24T10:35:36.669Z",
-      "updatedAt": "2024-02-24T10:35:36.669Z"
-    },
-    {
       "name": "Study",
       "color": "#428cd7",
       "icon": "https://api.iconify.design/fluent-emoji-flat/blue-book.svg",

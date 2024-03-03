@@ -6,8 +6,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
+import { addCategory } from '~/server-actions/category';
 import { Category } from '~/types/Category';
-import { addCategory } from '../actions/category';
 import CategoryIconSelect from './CategoryIconSelect';
 
 export type CategoryForm = Pick<Category, 'name' | 'color' | 'icon'>;
@@ -33,6 +33,8 @@ export const NewCategoryForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [isAdding, setIsAdding] = React.useState(false);
 
   const handleAddCategory = async (category: CategoryForm) => {
+    if (isAdding) return;
+
     setIsAdding(true);
 
     const [error] = await addCategory(category);
@@ -73,9 +75,7 @@ export const NewCategoryForm = ({ onSuccess }: { onSuccess: () => void }) => {
           <span className={clsx('label-text', { 'text-error': Boolean(errors.icon) })}>Category icon:</span>
         </div>
         <CategoryIconSelect
-          onSelect={(icon) => {
-            setValue('icon', icon, { shouldValidate: true });
-          }}
+          onSelect={(icon) => setValue('icon', icon, { shouldValidate: true })}
           value={getValues('icon')}
         />
       </label>
@@ -88,6 +88,7 @@ export const NewCategoryForm = ({ onSuccess }: { onSuccess: () => void }) => {
       </label>
 
       <button type="submit" className="btn btn-primary btn-md">
+        {isAdding && <span className="loading loading-spinner"></span>}
         Submit
       </button>
     </form>

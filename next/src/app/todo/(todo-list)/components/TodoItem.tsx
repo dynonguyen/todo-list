@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import dayjs from 'dayjs';
 import React from 'react';
 import { toast } from 'react-toastify';
+import { deleteTodo, makeDoneTodo } from '~/server-actions/todo';
 import { Todo } from '~/types/Todo';
-import { deleteTodo, makeDoneTodo } from '../actions/todo';
 import TodoCategory from './TodoCategory';
 
 export const TodoItem = (props: Todo) => {

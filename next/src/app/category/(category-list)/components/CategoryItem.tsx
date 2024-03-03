@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { toast } from 'react-toastify';
+import { deleteCategory } from '~/server-actions/category';
 import { Category } from '~/types/Category';
-import { deleteCategory } from '../actions/category';
 
 export const CategoryItem = (props: Category) => {
   const { id, name, icon, color } = props;

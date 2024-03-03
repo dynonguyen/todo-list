@@ -1,6 +1,9 @@
+'use client';
+
+import useSWR from 'swr';
 import { ENDPOINT } from '~/constants/endpoint';
-import { QUERY_KEY } from '~/constants/key';
 import { Category } from '~/types/Category';
+import { swrFetcher } from '~/utils/swr';
 
 interface TodoCategoryProps {
   id: string;
@@ -9,12 +12,7 @@ interface TodoCategoryProps {
 export const TodoCategory = (props: TodoCategoryProps) => {
   const { id } = props;
 
-  return null;
-
-  const { data: category } = useQuery({
-    queryKey: [QUERY_KEY.CATEGORY, id],
-    queryFn: fetcher<Category>(ENDPOINT.GET_CATEGORY.replace(':id', id))
-  });
+  const { data: category } = useSWR<Category>(ENDPOINT.GET_CATEGORY.replace(':id', id), { fetcher: swrFetcher });
 
   if (!category) return null;
 

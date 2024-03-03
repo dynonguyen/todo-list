@@ -2,6 +2,7 @@
 
 import to from 'await-to-js';
 import { revalidateTag } from 'next/cache';
+import { API_URI } from '~/constants/common';
 
 const REVALIDATE_TIME = 360;
 
@@ -13,7 +14,7 @@ export async function fetcher<T = unknown, E = Error>(
   const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
 
   const [error, data] = await to<T, E>(
-    fetch(process.env.NEXT_PUBLIC_API_URI + endpoint + queryString, {
+    fetch(API_URI + endpoint + queryString, {
       next: { revalidate: REVALIDATE_TIME, tags: tags },
       headers: { 'Content-type': 'application/json' },
       method: 'GET',
@@ -41,7 +42,7 @@ export async function mutation<T = unknown, E = Error>(
   const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
 
   const [error, data] = await to<T, E>(
-    fetch(process.env.NEXT_PUBLIC_API_URI + endpoint + queryString, {
+    fetch(API_URI + endpoint + queryString, {
       headers: { 'Content-type': 'application/json' },
       method,
       ...(body && { body: JSON.stringify(body) }),
