@@ -16,3 +16,10 @@ export const SEARCH_PARAM_KEY = {
   KEYWORD: 'keyword',
   FILTER: 'filter'
 };
+
+export const TAGS = {
+  TODOS: 'todos',
+  CATEGORY_ICON: 'category-icon',
+  CATEGORIES: 'categories',
+  CATEGORY: 'category'
+};

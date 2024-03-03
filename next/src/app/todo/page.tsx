@@ -1,8 +1,9 @@
+import { Metadata } from 'next';
 import Pagination from '~/components/Pagination';
 import SearchBar from '~/components/SearchBar';
 import { DEFAULT } from '~/constants/default';
 import { ENDPOINT } from '~/constants/endpoint';
-import { SEARCH_PARAM_KEY } from '~/constants/key';
+import { SEARCH_PARAM_KEY, TAGS } from '~/constants/key';
 import { Paginated } from '~/types/Paginated';
 import { Todo } from '~/types/Todo';
 import { fetcher } from '~/utils/fetcher';
@@ -13,6 +14,8 @@ import TodoItem from './(todo-list)/components/TodoItem';
 type TodoListPageProps = {
   searchParams: Record<string, string>;
 };
+
+export const metadata: Metadata = { title: 'Dodo | Todo list' };
 
 export const TodoListPage = async (props: TodoListPageProps) => {
   const { searchParams } = props;
@@ -36,7 +39,7 @@ export const TodoListPage = async (props: TodoListPageProps) => {
     ...isCompletedFilter
   };
 
-  const [_, data] = await fetcher<Paginated<Todo>>(ENDPOINT.GET_TODOS, { params });
+  const [_, data] = await fetcher<Paginated<Todo>>(ENDPOINT.GET_TODOS, { params, tags: [TAGS.TODOS] });
 
   const todos = data?.docs || [];
   const pagination = data?.pagination;

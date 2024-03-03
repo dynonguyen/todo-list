@@ -2,27 +2,32 @@
 
 import clsx from 'clsx';
 import dayjs from 'dayjs';
+import React from 'react';
+import { toast } from 'react-toastify';
 import { Todo } from '~/types/Todo';
+import { deleteTodo, makeDoneTodo } from '../actions/todo';
 import TodoCategory from './TodoCategory';
-
-const markDoneTodo = async ({ id, isCompleted }: Pick<Todo, 'id' | 'isCompleted'>) => {
-  // return axiosInstance.patch(ENDPOINT.PATCH_MARK_DONE.replace(':id', id), { isCompleted });
-};
-const deleteTodo = async ({ id }: Pick<Todo, 'id'>) => {
-  // return axiosInstance.delete(ENDPOINT.DELETE_TODO.replace(':id', id));
-};
 
 export const TodoItem = (props: Todo) => {
   const { id, title, createdAt, isCompleted, categoryId } = props;
+  const [isDeleting, setIsDeleting] = React.useState(false);
 
-  const handleToggleComplete = () => {};
+  const handleToggleComplete = async () => {
+    const [error] = await makeDoneTodo({ id, isCompleted: !isCompleted });
+    if (error) toast.error(error.message);
+  };
 
-  const handleDeleteTodo = (ev: React.MouseEvent) => {
-    /*   ev.preventDefault();
+  const handleDeleteTodo = async (ev: React.MouseEvent) => {
+    setIsDeleting(true);
+
+    ev.preventDefault();
     ev.stopPropagation();
 
-    if (deleteMutation.isPending) return;
-    deleteMutation.mutate({ id }); */
+    const [error] = await deleteTodo(id);
+
+    if (error) toast.error(error.message);
+
+    setIsDeleting(false);
   };
 
   return (
@@ -42,7 +47,7 @@ export const TodoItem = (props: Todo) => {
         <p className="text-sm text-gray-500">{dayjs(createdAt).format('HH:mm DD/MM/YYYY')}</p>
       </div>
 
-      {false ? (
+      {isDeleting ? (
         <span className="loading text-error loading-spinner"></span>
       ) : (
         <span
