@@ -19,7 +19,7 @@
 
 ---
 
-## 🛠️ Docs
+## 📄 Docs
 
 - <img src="./.docs/imgs/json.svg" width="24" align="center" /> [Server - Mock data](./server/README.md)
 
