@@ -38,3 +38,5 @@
 - <img src="./.docs/imgs/vue.svg" width="24" align="center" /> [Vue](./vue/README.md)
 
 - <img src="./.docs/imgs/angular.svg" width="24" align="center" /> [Angular](./angular/README.md)
+
+- <img src="./.docs/imgs/electron.svg" width="24" align="center" /> [Electron](./electron/README.md)
