@@ -29,10 +29,6 @@
 
 - <img src="./.docs/imgs/react.svg" width="24" align="center" /> [React Native](./react-native/README.md)
 
-- <img src="./.docs/imgs/preact.svg" width="24" align="center" /> [Preact](./preact/README.md)
-
-- <img src="./.docs/imgs/solid.svg" width="24" align="center" /> [Solid](./solid/README.md)
-
 - <img src="./.docs/imgs/svelte.svg" width="24" align="center" /> [Svelte](./svelte/README.md)
 
 - <img src="./.docs/imgs/vue.svg" width="24" align="center" /> [Vue](./vue/README.md)

@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"dev": "nodemon server.js",
+		"dev": "node server.js",
 		"start": "node server.js"
 	},
 	"dependencies": {
@@ -13,7 +13,5 @@
 		"morgan": "^1.10.0",
 		"query-string": "^8.2.0"
 	},
-	"devDependencies": {
-		"nodemon": "^3.0.3"
-	}
+	"devDependencies": {}
 }
