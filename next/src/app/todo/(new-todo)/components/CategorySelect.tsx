@@ -28,7 +28,11 @@ export const CategorySelect = (props: CategorySelectProps) => {
             setOpen(true);
           }}
         >
-          <img className="w-5 h-5 mx-auto" src={categories.find((cat) => cat.id === value)?.icon} />
+          <img
+            alt="Category icon"
+            className="w-5 h-5 mx-auto"
+            src={categories.find((cat) => cat.id === value)?.icon || ''}
+          />
         </div>
       ) : (
         <button type="button" className="btn btn-sm" onClick={() => setOpen(true)}>
@@ -59,7 +63,7 @@ export const CategorySelect = (props: CategorySelectProps) => {
                       onSelect?.(category.id);
                     }}
                   >
-                    <img className="w-5 h-5" src={category.icon} />
+                    <img alt="Category icon" className="w-5 h-5" src={category.icon} />
                   </div>
                 </div>
               ))}

@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <head>
         {/* Get default theme without flicker */}
-        <script src={withAssets('scripts/theme.js')}></script>
+        <script async src={withAssets('scripts/theme.js')}></script>
       </head>
 
       <body className={poppinsFont.className}>

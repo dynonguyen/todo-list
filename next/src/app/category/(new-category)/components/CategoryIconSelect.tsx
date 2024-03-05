@@ -29,7 +29,7 @@ export const CategoryIconSelect = (props: CategoryIconSelectProps) => {
           className="flex items-center justify-center transition-colors rounded-md cursor-pointer w-11 h-11 bg-base-300/70 hover:bg-base-300"
           onClick={() => setOpen(!open)}
         >
-          <img src={value} className="w-5 h-5 mx-auto" />
+          <img alt="Category icon" src={value} className="w-5 h-5 mx-auto" />
         </div>
       ) : (
         <button type="button" className="btn btn-sm" onClick={() => setOpen(!open)}>
@@ -51,6 +51,7 @@ export const CategoryIconSelect = (props: CategoryIconSelectProps) => {
               icons.map((icon) => (
                 <img
                   key={icon}
+                  alt={icon}
                   title={icon.split('/').pop()?.replace('.svg', '')}
                   src={icon}
                   className="w-5 h-5 mx-auto transition-transform cursor-pointer hover:scale-110"

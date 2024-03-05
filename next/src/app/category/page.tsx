@@ -6,7 +6,9 @@ import CategoryItem from './(category-list)/components/CategoryItem';
 import NewCategory from './(new-category)';
 
 export const CategoryPage = async () => {
-  const [_, categories = []] = await fetcher<Category[]>(ENDPOINT.GET_CATEGORIES, { tags: [TAGS.CATEGORIES] });
+  const [_, categories = []] = await fetcher<Category[]>(ENDPOINT.GET_CATEGORIES, {
+    tags: [TAGS.CATEGORIES]
+  });
 
   return (
     <div className="grid grid-cols-4 gap-4 px-4">

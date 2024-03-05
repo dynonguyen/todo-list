@@ -15,8 +15,10 @@
 	"files.exclude": {
 		"**/.docs": false,
 		"**/bun.lockb": true,
-		"**/yarn.lock": true
+		"**/yarn.lock": true,
+		"**/.next": false
 	},
+	"search.exclude": { "**/.next": true },
 	"tailwindCSS.emmetCompletions": true,
 	"tailwindCSS.colorDecorators": false,
 	"headwind.removeDuplicates": true,

@@ -24,7 +24,7 @@ export const CategoryItem = (props: Category) => {
         className="relative flex items-center justify-center w-16 h-16 mx-auto overflow-hidden rounded-lg cursor-pointer group"
         style={{ backgroundColor: color }}
       >
-        <img className="w-8 h-8" src={icon} />
+        <img alt="Icon" className="w-8 h-8" src={icon} />
         <span
           className="absolute flex items-center justify-center invisible w-full h-full transition-all opacity-0 bg-gray-800/70 group-hover:visible group-hover:opacity-100"
           onClick={handleDelete}

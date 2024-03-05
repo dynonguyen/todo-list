@@ -22,7 +22,7 @@ export const TodoCategory = (props: TodoCategoryProps) => {
         className="flex items-center justify-center w-8 h-8 transition-colors rounded-md cursor-pointer bg-base-300/70 hover:bg-base-300"
         style={{ backgroundColor: category.color }}
       >
-        <img className="w-4 h-4 mx-auto" src={category.icon} />
+        <img alt="Category" className="w-4 h-4 mx-auto" src={category.icon} />
       </div>
     </div>
   );
