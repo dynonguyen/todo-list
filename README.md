@@ -27,12 +27,12 @@
 
 - <img src="./.docs/imgs/next.svg" width="24" align="center" /> [Next](./next/README.md)
 
-- <img src="./.docs/imgs/react.svg" width="24" align="center" /> [React Native](./react-native/README.md)
+- <img src="./.docs/imgs/react.svg" width="24" align="center" /> [React Native](./react-native/README.md) (Coming soon)
 
-- <img src="./.docs/imgs/svelte.svg" width="24" align="center" /> [Svelte](./svelte/README.md)
+- <img src="./.docs/imgs/svelte.svg" width="24" align="center" /> [Svelte](./svelte/README.md) (Coming soon)
 
-- <img src="./.docs/imgs/vue.svg" width="24" align="center" /> [Vue](./vue/README.md)
+- <img src="./.docs/imgs/vue.svg" width="24" align="center" /> [Vue](./vue/README.md) (Coming soon)
 
-- <img src="./.docs/imgs/angular.svg" width="24" align="center" /> [Angular](./angular/README.md)
+- <img src="./.docs/imgs/angular.svg" width="24" align="center" /> [Angular](./angular/README.md) (Coming soon)
 
-- <img src="./.docs/imgs/electron.svg" width="24" align="center" /> [Electron](./electron/README.md)
+- <img src="./.docs/imgs/electron.svg" width="24" align="center" /> [Electron](./electron/README.md) (Coming soon)
