@@ -52,7 +52,12 @@ export const TodoListPage = async (props: TodoListPageProps) => {
       </div>
 
       {todos.length ? todos.map((todo) => <TodoItem key={todo.id} {...todo} />) : <NoTodoFound />}
-      {Number(pagination?._total) > limit && <Pagination total={pagination?._total} />}
+
+      {Number(pagination?._total) > limit && (
+        <div className="flex justify-end w-full">
+          <Pagination total={pagination?._total} />
+        </div>
+      )}
     </div>
   );
 };

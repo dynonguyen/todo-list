@@ -2,11 +2,12 @@
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
 import dayjs from 'dayjs'
 import { axiosInstance } from '~/configs/query-client'
-import { ENDPOINT } from '~/constants/endpoin'
+import { ENDPOINT } from '~/constants/endpoint'
 import { QUERY_KEY } from '~/constants/key'
 import type { Todo } from '~/types/Todo'
+import TodoCategory from './TodoCategory.vue'
 
-const { id, title, createdAt, isCompleted } = defineProps<Todo>()
+const props = defineProps<Todo>()
 
 const queryClient = useQueryClient()
 
@@ -24,6 +25,7 @@ const markDoneMutation = useMutation({
     queryClient.invalidateQueries({ queryKey: [QUERY_KEY.TODOS] })
   }
 })
+
 const deleteMutation = useMutation({
   mutationFn: deleteTodo,
   onSuccess: () => {
@@ -32,7 +34,7 @@ const deleteMutation = useMutation({
 })
 
 const handleToggleComplete = () => {
-  markDoneMutation.mutate({ id, isCompleted: !isCompleted })
+  markDoneMutation.mutate({ id: props.id, isCompleted: !props.isCompleted })
 }
 
 const handleDeleteTodo = (ev: MouseEvent) => {
@@ -40,35 +42,35 @@ const handleDeleteTodo = (ev: MouseEvent) => {
   ev.stopPropagation()
 
   if (deleteMutation.isPending.value) return
-  deleteMutation.mutate({ id })
+  deleteMutation.mutate({ id: props.id })
 }
 </script>
 
 <template>
   <li
-    className="group px-2.5 py-3 bg-base-200 hover:shadow-lg rounded-lg flex gap-3 items-center cursor-pointer transition-shadow"
+    class="group px-2.5 py-3 bg-base-200 hover:shadow-lg rounded-lg flex gap-3 items-center cursor-pointer transition-shadow"
     @click="handleToggleComplete"
   >
     <input
       type="checkbox"
-      :checked="isCompleted"
+      :checked="props.isCompleted"
       readOnly
       class="rounded-full checkbox checkbox-xs shrink-0"
-      :class="{ 'checkbox-success': isCompleted }"
+      :class="{ 'checkbox-success': props.isCompleted }"
     />
 
-    <div className="flex flex-col gap-1 grow">
-      <h6 className="text-base font-normal break-all whitespace-pre-wrap ">{{ title }}</h6>
-      <p className="text-sm text-gray-500">{{ dayjs(createdAt).format('HH:mm DD/MM/YYYY') }}</p>
+    <div class="flex flex-col gap-1 grow">
+      <h6 class="text-base font-normal break-all whitespace-pre-wrap">{{ props.title }}</h6>
+      <p class="text-sm text-gray-500">{{ dayjs(props.createdAt).format('HH:mm DD/MM/YYYY') }}</p>
     </div>
 
-    <span v-if="deleteMutation.isPending.value" className="loading text-error loading-spinner"></span>
+    <span v-if="deleteMutation.isPending.value" class="loading text-error loading-spinner"></span>
     <span
       v-else
-      className="icon-[ph--trash-simple-fill] w-5 h-5 text-error shrink-0 group-hover:opacity-100 group-hover:visible opacity-0 invisible transition-all hover:text-error/80"
+      class="icon-[ph--trash-simple-fill] w-5 h-5 text-error shrink-0 group-hover:opacity-100 group-hover:visible opacity-0 invisible transition-all hover:text-error/80"
       @click="handleDeleteTodo"
     ></span>
 
-    <!-- {categoryId && <TodoCategory id="{categoryId}" />} -->
+    <TodoCategory v-if="categoryId" :id="categoryId" />
   </li>
 </template>

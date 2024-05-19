@@ -16,8 +16,12 @@
     "axios": "^1.6.8",
     "dayjs": "^1.11.11",
     "pinia": "^2.1.7",
+    "uuid": "^9.0.1",
+    "vee-validate": "^4.12.8",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue-toastification": "^2.0.0-rc.5",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@iconify-json/ph": "^1.1.11",
@@ -26,6 +30,7 @@
     "@tsconfig/node20": "^20.1.4",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.12.5",
+    "@types/uuid": "^9.0.8",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",

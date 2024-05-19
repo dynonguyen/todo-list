@@ -31,7 +31,7 @@
 
 - <img src="./.docs/imgs/svelte.svg" width="24" align="center" /> [Svelte](./svelte/README.md) (Coming soon)
 
-- <img src="./.docs/imgs/vue.svg" width="24" align="center" /> [Vue](./vue/README.md) (Coming soon)
+- <img src="./.docs/imgs/vue.svg" width="24" align="center" /> [Vue](./vue/README.md)
 
 - <img src="./.docs/imgs/angular.svg" width="24" align="center" /> [Angular](./angular/README.md) (Coming soon)
 

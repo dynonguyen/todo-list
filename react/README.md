@@ -43,7 +43,8 @@ Open browser: [localhost:8000](http://localhost:8000)
     "react-toastify": "^10.0.4", // ~ notistack
 
     // Other utility libraries
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "lodash-es": "^4.17.21"
   },
 
   "devDependencies": {

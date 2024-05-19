@@ -5,6 +5,7 @@ import { PATH } from '~/constants/path'
 
 // -----------------------------
 const TodoList = () => import('~/features/todo-list/TodoList.vue')
+const CategoryList = () => import('~/features/category-list/CategoryList.vue')
 
 // -----------------------------
 const routes: Readonly<RouteRecordRaw[]> = [
@@ -13,7 +14,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
     component: MainLayout,
     children: [
       { path: PATH.TODO, component: TodoList },
-      { path: PATH.CATEGORY, component: ComingSoon },
+      { path: PATH.CATEGORY, component: CategoryList },
       { path: PATH.CALENDAR, component: ComingSoon },
       { path: PATH.FOCUS, component: ComingSoon },
       { path: '/:*', name: 'NotFound', redirect: PATH.TODO }

@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { PATH } from '~/constants/path';
-import type { MenuItem } from './NavigationItem.vue';
-import NavigationItem from './NavigationItem.vue';
+import { useRoute } from 'vue-router'
+import { PATH } from '~/constants/path'
+import NewTodo from '~/features/new-todo/NewTodo.vue'
+import type { MenuItem } from './NavigationItem.vue'
+import NavigationItem from './NavigationItem.vue'
+
+const route = useRoute()
 
 const leftMenu: MenuItem[] = [
   {
@@ -16,7 +20,7 @@ const leftMenu: MenuItem[] = [
     icon: 'icon-[ph--shapes]',
     activeIcon: 'icon-[ph--shapes-fill]'
   }
-];
+]
 
 const rightMenu: MenuItem[] = [
   {
@@ -26,15 +30,15 @@ const rightMenu: MenuItem[] = [
     activeIcon: 'icon-[ph--calendar-fill]'
   },
   { title: 'Focus', to: PATH.FOCUS, icon: 'icon-[ph--timer]', activeIcon: 'icon-[ph--timer-fill]' }
-];
+]
 </script>
 
 <template>
-  <ul className="flex items-center justify-between gap-2 py-2 bg-base-200 px-7">
-    <NavigationItem v-for="item in leftMenu" :key="item.to" :="item" />
+  <ul class="flex items-center justify-between gap-2 py-2 bg-base-200 px-7">
+    <NavigationItem v-for="item in leftMenu" :key="item.to" :="item" :selected="route.path === item.to" />
 
-    <div>+</div>
+    <NewTodo />
 
-    <NavigationItem v-for="item in rightMenu" :key="item.to" :="item" />
+    <NavigationItem v-for="item in rightMenu" :key="item.to" :="item" :selected="route.path === item.to" />
   </ul>
 </template>

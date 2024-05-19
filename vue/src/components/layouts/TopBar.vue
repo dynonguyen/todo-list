@@ -6,11 +6,11 @@ import ThemeController from '../ThemeController.vue'
 </script>
 
 <template>
-  <div className="flex justify-between p-4">
+  <div class="flex justify-between p-4">
     <RouterLink :to="PATH.TODO">
-      <div className="flex items-center justify-center gap-3">
-        <img className="flex justify-center w-10" :src="withAssets('logo.png')" />
-        <h1 className="text-2xl font-medium text-primary">Dodo</h1>
+      <div class="flex items-center justify-center gap-3">
+        <img class="flex justify-center w-10" :src="withAssets('logo.png')" />
+        <h1 class="text-2xl font-medium text-primary">Dodo</h1>
       </div>
     </RouterLink>
 
